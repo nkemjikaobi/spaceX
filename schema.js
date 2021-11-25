@@ -9,7 +9,7 @@ const {
 	GraphQLBoolean,
 } = require('graphql');
 
-//Launch Typeee
+//Launch Type
 const LaunchType = new GraphQLObjectType({
 	name: 'Launch',
 	fields: () => ({
