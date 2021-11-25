@@ -1,12 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 const LaunchItem = ({
 	launch: { flight_number, mission_name, launch_date_local, launch_success },
 }) => {
 	return (
-		<div classNamw='cards card-body mb-3'>
+		<div className='cards card-body mb-3'>
 			<div className='row'>
 				<div className='col-md-9'>
 					<h4>
@@ -25,7 +26,7 @@ const LaunchItem = ({
 					</p>
 				</div>
 				<div className='col-md-3'>
-					<button className='btn btn-secondary'>Launch Details</button>
+					<Link to={`/launch/${flight_number}`} className='btn btn-secondary'>Launch Details</Link>
 				</div>
 			</div>
 		</div>

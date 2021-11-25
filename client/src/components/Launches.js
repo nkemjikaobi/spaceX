@@ -26,8 +26,8 @@ const Launches = () => {
 					if (error) console.log(error);
 					return (
 						<Fragment>
-							{data.launches.map(launch => (
-								<LaunchItem key={launch.flight_number} launch={launch} />
+							{data.launches.map((launch, index) => (
+								<LaunchItem key={index} launch={launch} />
 							))}
 						</Fragment>
 					);
