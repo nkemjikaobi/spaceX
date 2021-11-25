@@ -6,12 +6,15 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"yarn server \" \"yarn client \"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Obi Nkemjika Derick",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.24.0",
+    "concurrently": "^6.4.0",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.0.1"
